@@ -13,7 +13,7 @@ struct SplashScreen: View {
     var body: some View {
         Group {
             if isSplashFinished{
-                Onboarding()
+                ContentView()
             } else {
                 ZStack{
                     Image("bg")

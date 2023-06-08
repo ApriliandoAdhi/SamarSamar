@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0A26052A321E85006325CB /* Riwayat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A26042A321E85006325CB /* Riwayat.swift */; };
+		0A0A26072A321F2A006325CB /* RencanaMingguan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A26062A321F2A006325CB /* RencanaMingguan.swift */; };
+		0A0A26092A32235A006325CB /* TabVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A26082A32235A006325CB /* TabVIew.swift */; };
 		8EB475D42A31E136001738AF /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475D32A31E136001738AF /* SplashScreen.swift */; };
 		F9ED691A2A2E492D00D4E3C2 /* PendasiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED69192A2E492D00D4E3C2 /* PendasiApp.swift */; };
 		F9ED691C2A2E492D00D4E3C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED691B2A2E492D00D4E3C2 /* ContentView.swift */; };
 		F9ED691E2A2E492E00D4E3C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9ED691D2A2E492E00D4E3C2 /* Assets.xcassets */; };
 		F9ED69212A2E492E00D4E3C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9ED69202A2E492E00D4E3C2 /* Preview Assets.xcassets */; };
-		F9ED69282A2E499400D4E3C2 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED69272A2E499400D4E3C2 /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A0A26042A321E85006325CB /* Riwayat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Riwayat.swift; sourceTree = "<group>"; };
+		0A0A26062A321F2A006325CB /* RencanaMingguan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RencanaMingguan.swift; sourceTree = "<group>"; };
+		0A0A26082A32235A006325CB /* TabVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVIew.swift; sourceTree = "<group>"; };
 		8EB475D32A31E136001738AF /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		F9ED69162A2E492D00D4E3C2 /* Pendasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pendasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9ED69192A2E492D00D4E3C2 /* PendasiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendasiApp.swift; sourceTree = "<group>"; };
 		F9ED691B2A2E492D00D4E3C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F9ED691D2A2E492E00D4E3C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9ED69202A2E492E00D4E3C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F9ED69272A2E499400D4E3C2 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				F9ED69192A2E492D00D4E3C2 /* PendasiApp.swift */,
-				F9ED691B2A2E492D00D4E3C2 /* ContentView.swift */,
-				F9ED69272A2E499400D4E3C2 /* Onboarding.swift */,
 				8EB475D32A31E136001738AF /* SplashScreen.swift */,
+				F9ED691B2A2E492D00D4E3C2 /* ContentView.swift */,
+				0A0A26082A32235A006325CB /* TabVIew.swift */,
+				0A0A26062A321F2A006325CB /* RencanaMingguan.swift */,
+				0A0A26042A321E85006325CB /* Riwayat.swift */,
 				F9ED691D2A2E492E00D4E3C2 /* Assets.xcassets */,
 				F9ED691F2A2E492E00D4E3C2 /* Preview Content */,
 			);
@@ -143,9 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0A26072A321F2A006325CB /* RencanaMingguan.swift in Sources */,
 				8EB475D42A31E136001738AF /* SplashScreen.swift in Sources */,
-				F9ED69282A2E499400D4E3C2 /* Onboarding.swift in Sources */,
+				0A0A26092A32235A006325CB /* TabVIew.swift in Sources */,
 				F9ED691C2A2E492D00D4E3C2 /* ContentView.swift in Sources */,
+				0A0A26052A321E85006325CB /* Riwayat.swift in Sources */,
 				F9ED691A2A2E492D00D4E3C2 /* PendasiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
