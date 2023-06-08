@@ -11,7 +11,7 @@ import SwiftUI
 struct PendasiApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreen()
         }
     }
 }
