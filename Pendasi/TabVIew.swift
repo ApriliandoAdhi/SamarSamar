@@ -15,7 +15,7 @@ struct TabVIew: View {
     var body: some View {
         TabView {
             Group {
-             RencanaMingguan()
+                RencanaMingguan()
                 .tabItem {
                     Label("Rencana MPASI", systemImage: "square.and.pencil")
                 }

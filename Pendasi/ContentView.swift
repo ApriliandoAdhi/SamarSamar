@@ -45,27 +45,30 @@ struct ContentView: View {
                             .padding()
                         }
                         Button {
-                            // Tindakan yang ingin Anda lakukan saat tombol "Mulai Rencana" ditekan
                         } label: {
                             Text("Mulai Rencana")
+                                .fontWeight(.bold)
                                 .multilineTextAlignment(.center)
-                                .padding(.trailing, 120)
+                                .lineLimit(1)
+                                .padding(.trailing, 100)
                                 .padding(.leading, 94)
-                                .padding(.top, 15)
-                                .padding(.bottom, 15)
-                                .font(.title)
+                                .padding(.top, 16)
+                                .padding(.bottom, 16 )
+//                                .padding(.top, 15)
+//                                .padding(.bottom, 15)
+                                .font(.title2)
                                 .background(Color("AccentColor"))
-                                .cornerRadius(0)
+                                .cornerRadius(8)
                                 .foregroundColor(.white)
                                 .shadow(radius: 5)
                         }
                     }
                 }
+                .padding(/*@START_MENU_TOKEN@*/.horizontal, 16.0/*@END_MENU_TOKEN@*/)
                 .toolbarBackground(Color.white, for: .navigationBar)
                 .toolbarBackground(.visible, for: .navigationBar)
             }
             .navigationBarItems(trailing: Button(action: {
-                // Tindakan yang ingin Anda lakukan saat tombol "lewati" ditekan
             }) {
                 Text("Lewati")
                     .foregroundColor(.yellow)
