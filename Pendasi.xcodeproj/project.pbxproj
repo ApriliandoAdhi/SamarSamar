@@ -11,6 +11,8 @@
 		0A0A26092A32235A006325CB /* TabVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A26082A32235A006325CB /* TabVIew.swift */; };
 		8EB475D42A31E136001738AF /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475D32A31E136001738AF /* SplashScreen.swift */; };
 		8EB475D62A322EA0001738AF /* RencanaMingguan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475D52A322EA0001738AF /* RencanaMingguan.swift */; };
+		8EB475DC2A32475E001738AF /* tanggal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475DB2A32475E001738AF /* tanggal.swift */; };
+		8EB475E22A32CEB4001738AF /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475E12A32CEB4001738AF /* ModalView.swift */; };
 		F9ED691A2A2E492D00D4E3C2 /* PendasiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED69192A2E492D00D4E3C2 /* PendasiApp.swift */; };
 		F9ED691C2A2E492D00D4E3C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED691B2A2E492D00D4E3C2 /* ContentView.swift */; };
 		F9ED691E2A2E492E00D4E3C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9ED691D2A2E492E00D4E3C2 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 		0A0A26082A32235A006325CB /* TabVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabVIew.swift; sourceTree = "<group>"; };
 		8EB475D32A31E136001738AF /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		8EB475D52A322EA0001738AF /* RencanaMingguan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RencanaMingguan.swift; sourceTree = "<group>"; };
+		8EB475DB2A32475E001738AF /* tanggal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tanggal.swift; sourceTree = "<group>"; };
+		8EB475E12A32CEB4001738AF /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		F9ED69162A2E492D00D4E3C2 /* Pendasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pendasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9ED69192A2E492D00D4E3C2 /* PendasiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendasiApp.swift; sourceTree = "<group>"; };
 		F9ED691B2A2E492D00D4E3C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,7 +68,9 @@
 				F9ED691B2A2E492D00D4E3C2 /* ContentView.swift */,
 				0A0A26082A32235A006325CB /* TabVIew.swift */,
 				8EB475D52A322EA0001738AF /* RencanaMingguan.swift */,
+				8EB475E12A32CEB4001738AF /* ModalView.swift */,
 				0A0A26042A321E85006325CB /* Riwayat.swift */,
+				8EB475DB2A32475E001738AF /* tanggal.swift */,
 				F9ED691D2A2E492E00D4E3C2 /* Assets.xcassets */,
 				F9ED691F2A2E492E00D4E3C2 /* Preview Content */,
 			);
@@ -149,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB475DC2A32475E001738AF /* tanggal.swift in Sources */,
 				8EB475D42A31E136001738AF /* SplashScreen.swift in Sources */,
+				8EB475E22A32CEB4001738AF /* ModalView.swift in Sources */,
 				0A0A26092A32235A006325CB /* TabVIew.swift in Sources */,
 				8EB475D62A322EA0001738AF /* RencanaMingguan.swift in Sources */,
 				F9ED691C2A2E492D00D4E3C2 /* ContentView.swift in Sources */,
