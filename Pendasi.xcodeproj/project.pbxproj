@@ -17,6 +17,8 @@
 		0A0A26172A331649006325CB /* EditProfilAnak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A26162A331649006325CB /* EditProfilAnak.swift */; };
 		8EB475D42A31E136001738AF /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475D32A31E136001738AF /* SplashScreen.swift */; };
 		8EB475D62A322EA0001738AF /* RencanaMingguan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475D52A322EA0001738AF /* RencanaMingguan.swift */; };
+		8EB475DC2A32475E001738AF /* tanggal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475DB2A32475E001738AF /* tanggal.swift */; };
+		8EB475E22A32CEB4001738AF /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475E12A32CEB4001738AF /* ModalView.swift */; };
 		F9ED691A2A2E492D00D4E3C2 /* PendasiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED69192A2E492D00D4E3C2 /* PendasiApp.swift */; };
 		F9ED691C2A2E492D00D4E3C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ED691B2A2E492D00D4E3C2 /* ContentView.swift */; };
 		F9ED691E2A2E492E00D4E3C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9ED691D2A2E492E00D4E3C2 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		0A0A26162A331649006325CB /* EditProfilAnak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilAnak.swift; sourceTree = "<group>"; };
 		8EB475D32A31E136001738AF /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		8EB475D52A322EA0001738AF /* RencanaMingguan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RencanaMingguan.swift; sourceTree = "<group>"; };
+		8EB475DB2A32475E001738AF /* tanggal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tanggal.swift; sourceTree = "<group>"; };
+		8EB475E12A32CEB4001738AF /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		F9ED69162A2E492D00D4E3C2 /* Pendasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pendasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9ED69192A2E492D00D4E3C2 /* PendasiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendasiApp.swift; sourceTree = "<group>"; };
 		F9ED691B2A2E492D00D4E3C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 				F9ED691B2A2E492D00D4E3C2 /* ContentView.swift */,
 				0A0A26082A32235A006325CB /* TabVIew.swift */,
 				8EB475D52A322EA0001738AF /* RencanaMingguan.swift */,
+				8EB475E12A32CEB4001738AF /* ModalView.swift */,
 				0A0A26042A321E85006325CB /* Riwayat.swift */,
 				0A0A260A2A32311B006325CB /* Detail.swift */,
 				0A0A260C2A32359A006325CB /* GantiMenu.swift */,
@@ -83,6 +88,7 @@
 				0A0A26122A3315BC006325CB /* BeritahuRespon.swift */,
 				0A0A26142A3315E5006325CB /* ProfilAnak.swift */,
 				0A0A26162A331649006325CB /* EditProfilAnak.swift */,
+				8EB475DB2A32475E001738AF /* tanggal.swift */,
 				F9ED691D2A2E492E00D4E3C2 /* Assets.xcassets */,
 				F9ED691F2A2E492E00D4E3C2 /* Preview Content */,
 			);
@@ -169,9 +175,11 @@
 			files = (
 				0A0A26152A3315E5006325CB /* ProfilAnak.swift in Sources */,
 				0A0A26132A3315BC006325CB /* BeritahuRespon.swift in Sources */,
+				8EB475DC2A32475E001738AF /* tanggal.swift in Sources */,
 				8EB475D42A31E136001738AF /* SplashScreen.swift in Sources */,
 				0A0A260B2A32311B006325CB /* Detail.swift in Sources */,
 				0A0A260D2A32359A006325CB /* GantiMenu.swift in Sources */,
+				8EB475E22A32CEB4001738AF /* ModalView.swift in Sources */,
 				0A0A26092A32235A006325CB /* TabVIew.swift in Sources */,
 				0A0A26112A33159E006325CB /* Pemberitahuan.swift in Sources */,
 				8EB475D62A322EA0001738AF /* RencanaMingguan.swift in Sources */,
