@@ -15,7 +15,6 @@ struct RencanaMingguan: View {
     @State private var showModal = false
     
     var body: some View {
-        TabView{
             NavigationView{
                 ZStack{
                     
@@ -106,17 +105,6 @@ struct RencanaMingguan: View {
                     }
                 }
             }
-            
-            .tabItem{
-                Label("Rencana MPASI", systemImage: "square.and.pencil")
-                
-            }
-            .tag(0)
-            Text("lala")
-                .tabItem{
-                    Label("Riwayat", systemImage: "clock.arrow.2.circlepath")
-                }
-        }
     }
 }
 
