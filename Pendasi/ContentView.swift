@@ -33,6 +33,7 @@ struct ContentView: View {
                             })
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding()
+                            .multilineTextAlignment(.leading)
                             .disabled(true)
                         }
                         if isDatePickerVisible {
@@ -40,10 +41,12 @@ struct ContentView: View {
                                 selection: $birthdate,
                                 displayedComponents: [.date]
                             ) {
-                                Text("Tanggal Lahir")
+                                Text("")
+                                
                             }
                             .datePickerStyle(WheelDatePickerStyle())
                             .padding()
+                            
                         }
                         NavigationLink(destination: TabVIew(), isActive: $isPlanStarted) {
                             EmptyView()
