@@ -3,7 +3,7 @@ import SwiftUI
 struct Riwayat: View {
     @State private var searchText = ""
     @State private var showNotifications = false
-    
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -34,7 +34,7 @@ struct Riwayat: View {
                                 .fontWeight(.regular)
                         }
                         Divider()
-                        .padding(.bottom, 600.0)
+                            .padding(.bottom, 580.0)
                     }
                 }
                 .toolbarBackground(Color.white, for: .navigationBar)
@@ -45,9 +45,7 @@ struct Riwayat: View {
             .searchable(text: $searchText, prompt: "Cari kata...")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        showNotifications = true
-                    }) {
+                    NavigationLink(destination: Pemberitahuan()) {
                         Image(systemName: "bell")
                             .foregroundColor(.primary)
                     }

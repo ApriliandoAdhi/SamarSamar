@@ -4,6 +4,8 @@ struct ContentView: View {
     @State private var name: String = ""
     @State private var birthdate: Date = Date()
     @State private var isDatePickerVisible = false
+    @State private var isPlanStarted = false
+    @State private var isSkipped = false
 
     var body: some View {
         NavigationView {
@@ -31,7 +33,6 @@ struct ContentView: View {
                             })
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding()
-                            
                             .disabled(true)
                         }
                         if isDatePickerVisible {
@@ -44,7 +45,11 @@ struct ContentView: View {
                             .datePickerStyle(WheelDatePickerStyle())
                             .padding()
                         }
+                        NavigationLink(destination: TabVIew(), isActive: $isPlanStarted) {
+                            EmptyView()
+                        }
                         Button {
+                            isPlanStarted = true
                         } label: {
                             Text("Mulai Rencana")
                                 .fontWeight(.bold)
@@ -54,8 +59,6 @@ struct ContentView: View {
                                 .padding(.leading, 94)
                                 .padding(.top, 16)
                                 .padding(.bottom, 16 )
-//                                .padding(.top, 15)
-//                                .padding(.bottom, 15)
                                 .font(.title2)
                                 .background(Color("AccentColor"))
                                 .cornerRadius(8)
@@ -64,16 +67,24 @@ struct ContentView: View {
                         }
                     }
                 }
-                .padding(/*@START_MENU_TOKEN@*/.horizontal, 16.0/*@END_MENU_TOKEN@*/)
+                .padding(.horizontal, 16.0)
                 .toolbarBackground(Color.white, for: .navigationBar)
                 .toolbarBackground(.visible, for: .navigationBar)
             }
             .navigationBarItems(trailing: Button(action: {
+                isSkipped = true
             }) {
-                Text("Lewati")
-                    .foregroundColor(.yellow)
+                NavigationLink(destination: TabVIew(), isActive: $isSkipped) {
+                    Text("Lewati")
+                        .foregroundColor(Color("Kuning"))
+                }
             })
         }
+        .background(
+            NavigationLink(destination: ProfilAnak(name: name, birthdate: birthdate), isActive: $isPlanStarted) {
+                EmptyView()
+            }
+        )
     }
 }
 

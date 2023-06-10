@@ -1,6 +1,10 @@
 import SwiftUI
 
+
 struct ProfilAnak: View {
+    let name: String
+    let birthdate: Date
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -11,11 +15,11 @@ struct ProfilAnak: View {
                         Group {
                             VStack {
                                 HStack {
-                                    Text ("Nama")
+                                    Text("Nama")
                                         .font(.body)
                                         .fontWeight(.regular)
                                     Spacer()
-                                    Text ("Chira")
+                                    Text(name)
                                         .font(.body)
                                         .fontWeight(.regular)
                                         .foregroundColor(Color("Abu1"))
@@ -25,19 +29,11 @@ struct ProfilAnak: View {
                                 Divider()
                                 
                                 HStack {
-                                    Text ("Tanggal Lahir")
+                                    Text("Tanggal Lahir")
                                         .font(.body)
                                         .fontWeight(.regular)
                                     Spacer()
-                                    Text ("20")
-                                        .font(.body)
-                                        .fontWeight(.regular)
-                                        .foregroundColor(Color("Abu1"))
-                                    Text ("Maret")
-                                        .font(.body)
-                                        .fontWeight(.regular)
-                                        .foregroundColor(Color("Abu1"))
-                                    Text ("2022")
+                                    Text(dateToString(date: birthdate))
                                         .font(.body)
                                         .fontWeight(.regular)
                                         .foregroundColor(Color("Abu1"))
@@ -55,6 +51,7 @@ struct ProfilAnak: View {
                             // Handle "Ubah" button tap
                         }) {
                             Text("Ubah")
+                                
                         }
                     }
                 }
@@ -65,10 +62,16 @@ struct ProfilAnak: View {
             }
         }
     }
+    
+    func dateToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM yyyy"
+        return formatter.string(from: date)
+    }
 }
 
 struct ProfilAnak_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilAnak()
+        ProfilAnak(name: "Chira", birthdate: Date())
     }
 }

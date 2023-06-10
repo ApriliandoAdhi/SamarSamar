@@ -39,7 +39,7 @@ struct EditProfilAnak: View {
                             selection: $birthdate,
                             displayedComponents: [.date]
                         ) {
-                            Text("Tanggal Lahir")
+                            Text("")
                         }
                         .datePickerStyle(WheelDatePickerStyle())
                         .padding()
