@@ -48,7 +48,7 @@ struct ContentView: View {
                             .padding()
                             
                         }
-                        NavigationLink(destination: TabVIew(), isActive: $isPlanStarted) {
+                        NavigationLink(destination: TabVIew().navigationBarBackButtonHidden(true), isActive: $isPlanStarted) {
                             EmptyView()
                         }
                         Button {
@@ -77,7 +77,7 @@ struct ContentView: View {
             .navigationBarItems(trailing: Button(action: {
                 isSkipped = true
             }) {
-                NavigationLink(destination: TabVIew(), isActive: $isSkipped) {
+                NavigationLink(destination: TabVIew().navigationBarBackButtonHidden(true), isActive: $isSkipped) {
                     Text("Lewati")
                         .foregroundColor(Color("Kuning"))
                 }
@@ -90,6 +90,7 @@ struct ContentView: View {
         )
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
