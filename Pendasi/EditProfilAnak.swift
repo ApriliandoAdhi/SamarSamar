@@ -1,31 +1,25 @@
-//
-//  EditProfilAnak.swift
-//  Pendasi
-//
-//  Created by Kholif Huda Arrasyid on 09/06/23.
-//
-
 import SwiftUI
 
 struct EditProfilAnak: View {
     @State private var name: String = ""
     @State private var birthdate: Date = Date()
     @State private var isDatePickerVisible = false
-    
+    @State private var isSaved = false
+
     var isFormFilled: Bool {
         return !name.isEmpty && !birthdate.description.isEmpty
     }
-    
+
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMMM yyyy"
         return formatter
     }
-    
+
     var formattedBirthdate: String {
         return dateFormatter.string(from: birthdate)
     }
-    
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -35,7 +29,7 @@ struct EditProfilAnak: View {
                     TextField("Nama", text: $name)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
-                    
+
                     Button(action: {
                         isDatePickerVisible = true
                     }) {
@@ -47,7 +41,7 @@ struct EditProfilAnak: View {
                         .multilineTextAlignment(.leading)
                         .disabled(true)
                     }
-                    
+
                     if isDatePickerVisible {
                         DatePicker(
                             selection: $birthdate,
@@ -58,11 +52,11 @@ struct EditProfilAnak: View {
                         .datePickerStyle(WheelDatePickerStyle())
                         .padding()
                     }
-                    
+
                     Spacer()
-                    
+
                     Button(action: {
-                        // Handle "Simpan" button tap
+                        isSaved = true
                     }) {
                         Text("Simpan")
                             .font(.title)
@@ -76,11 +70,13 @@ struct EditProfilAnak: View {
                     .disabled(!isFormFilled)
                     .padding(.bottom, 16)
                 }
-//                .padding(.bottom, 600)
                 .toolbarBackground(Color.white, for: .navigationBar)
                 .toolbarBackground(.visible, for: .navigationBar)
                 .navigationTitle("Edit Profil Anak")
                 .navigationBarTitleDisplayMode(.inline)
+            }
+            .fullScreenCover(isPresented: $isSaved) {
+                ProfilAnak(name: name, birthdate: birthdate)
             }
         }
     }
