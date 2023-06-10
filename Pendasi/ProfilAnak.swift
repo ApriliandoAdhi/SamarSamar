@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 struct ProfilAnak: View {
     let name: String
     let birthdate: Date
@@ -10,53 +9,47 @@ struct ProfilAnak: View {
             ZStack {
                 Color("Abu")
                     .ignoresSafeArea()
-                Group {
+                VStack {
                     VStack {
-                        Group {
-                            VStack {
-                                HStack {
-                                    Text("Nama")
-                                        .font(.body)
-                                        .fontWeight(.regular)
-                                    Spacer()
-                                    Text(name)
-                                        .font(.body)
-                                        .fontWeight(.regular)
-                                        .foregroundColor(Color("Abu1"))
-                                }
-                                .padding(.leading, 16)
-                                .padding(.trailing, 16)
-                                Divider()
-                                
-                                HStack {
-                                    Text("Tanggal Lahir")
-                                        .font(.body)
-                                        .fontWeight(.regular)
-                                    Spacer()
-                                    Text(dateToString(date: birthdate))
-                                        .font(.body)
-                                        .fontWeight(.regular)
-                                        .foregroundColor(Color("Abu1"))
-                                }
-                                .padding(.leading, 16)
-                                .padding(.trailing, 16)
-                            }
+                        HStack {
+                            Text("Nama")
+                                .font(.body)
+                                .fontWeight(.regular)
+                            Spacer()
+                            Text(name)
+                                .font(.body)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color("Abu1"))
                         }
-                        .padding(.bottom, 600)
+                        .padding(.leading, 16)
+                        .padding(.trailing, 16)
+                        Divider()
+                        HStack {
+                            Text("Tanggal Lahir")
+                                .font(.body)
+                                .fontWeight(.regular)
+                            Spacer()
+                            Text(dateToString(date: birthdate))
+                                .font(.body)
+                                .fontWeight(.regular)
+                                .foregroundColor(Color("Abu1"))
+                        }
+                        .padding(.leading, 16)
+                        .padding(.trailing, 16)
                     }
+                    .padding(.bottom, 700)
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
                         }) {
                             Text("Ubah")
-                                
                         }
                     }
                 }
                 .toolbarBackground(Color.white, for: .navigationBar)
                 .toolbarBackground(.visible, for: .navigationBar)
-                .navigationTitle("Pemberitahuan")
+                .navigationTitle("Profil Anak")
                 .navigationBarTitleDisplayMode(.inline)
             }
         }

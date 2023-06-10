@@ -34,7 +34,7 @@ struct Riwayat: View {
                                 .fontWeight(.regular)
                         }
                         Divider()
-                            .padding(.bottom, 500.0)
+                            .padding(.bottom, 600.0)
                     }
                 }
                 .toolbarBackground(Color.white, for: .navigationBar)

@@ -16,7 +16,6 @@ struct GantiMenu: View {
                             RoundedRectangle(cornerRadius: 15)
                                 .frame(width: 358.0, height: 58.0)
                                 .foregroundColor(.white)
-                            
                             HStack {
                                 Image("Daging")
                                     .resizable()

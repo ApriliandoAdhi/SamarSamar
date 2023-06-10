@@ -26,7 +26,10 @@ struct TabVIew: View {
                     .ignoresSafeArea()
             }
 //            .toolbarColorScheme(.yellow, for: .tabBar)
+
         }
+        .navigationBarBackButtonHidden(true)            .navigationBarTitle("", displayMode: .inline)
+     
     }
 }
 
