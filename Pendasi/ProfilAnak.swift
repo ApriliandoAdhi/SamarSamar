@@ -41,8 +41,7 @@ struct ProfilAnak: View {
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: {
-                        }) {
+                        NavigationLink(destination: EditProfilAnak()) {
                             Text("Ubah")
                         }
                     }
@@ -62,8 +61,14 @@ struct ProfilAnak: View {
     }
 }
 
+//struct EditProfilAnak: View {
+//    var body: some View {
+//        Text("Editing Profile")
+//    }
+//}
+
 struct ProfilAnak_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilAnak(name: "Chira", birthdate: Date())
+        ProfilAnak(name: "Input Your Child Name", birthdate: Date())
     }
 }
