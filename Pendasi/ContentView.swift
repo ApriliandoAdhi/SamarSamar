@@ -6,7 +6,7 @@ struct ContentView: View {
     @State private var isDatePickerVisible = false
     @State private var isPlanStarted = false
     @State private var isSkipped = false
-
+    
     var body: some View {
         NavigationView {
             ZStack {

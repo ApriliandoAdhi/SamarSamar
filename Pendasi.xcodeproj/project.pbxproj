@@ -15,6 +15,7 @@
 		0A0A26132A3315BC006325CB /* BeritahuRespon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A26122A3315BC006325CB /* BeritahuRespon.swift */; };
 		0A0A26152A3315E5006325CB /* ProfilAnak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A26142A3315E5006325CB /* ProfilAnak.swift */; };
 		0A0A26172A331649006325CB /* EditProfilAnak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A26162A331649006325CB /* EditProfilAnak.swift */; };
+		0AADF86F2A35D82700D6B86B /* DetailRiwayat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AADF86E2A35D82700D6B86B /* DetailRiwayat.swift */; };
 		8EB475D42A31E136001738AF /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475D32A31E136001738AF /* SplashScreen.swift */; };
 		8EB475D62A322EA0001738AF /* RencanaMingguan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475D52A322EA0001738AF /* RencanaMingguan.swift */; };
 		8EB475DC2A32475E001738AF /* tanggal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB475DB2A32475E001738AF /* tanggal.swift */; };
@@ -34,6 +35,7 @@
 		0A0A26122A3315BC006325CB /* BeritahuRespon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritahuRespon.swift; sourceTree = "<group>"; };
 		0A0A26142A3315E5006325CB /* ProfilAnak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilAnak.swift; sourceTree = "<group>"; };
 		0A0A26162A331649006325CB /* EditProfilAnak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfilAnak.swift; sourceTree = "<group>"; };
+		0AADF86E2A35D82700D6B86B /* DetailRiwayat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRiwayat.swift; sourceTree = "<group>"; };
 		8EB475D32A31E136001738AF /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		8EB475D52A322EA0001738AF /* RencanaMingguan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RencanaMingguan.swift; sourceTree = "<group>"; };
 		8EB475DB2A32475E001738AF /* tanggal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tanggal.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				8EB475D52A322EA0001738AF /* RencanaMingguan.swift */,
 				8EB475E12A32CEB4001738AF /* ModalView.swift */,
 				0A0A26042A321E85006325CB /* Riwayat.swift */,
+				0AADF86E2A35D82700D6B86B /* DetailRiwayat.swift */,
 				0A0A260A2A32311B006325CB /* Detail.swift */,
 				0A0A260C2A32359A006325CB /* GantiMenu.swift */,
 				0A0A26102A33159E006325CB /* Pemberitahuan.swift */,
@@ -178,6 +181,7 @@
 				8EB475DC2A32475E001738AF /* tanggal.swift in Sources */,
 				8EB475D42A31E136001738AF /* SplashScreen.swift in Sources */,
 				0A0A260B2A32311B006325CB /* Detail.swift in Sources */,
+				0AADF86F2A35D82700D6B86B /* DetailRiwayat.swift in Sources */,
 				0A0A260D2A32359A006325CB /* GantiMenu.swift in Sources */,
 				8EB475E22A32CEB4001738AF /* ModalView.swift in Sources */,
 				0A0A26092A32235A006325CB /* TabVIew.swift in Sources */,
@@ -315,7 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pendasi/Preview Content\"";
-				DEVELOPMENT_TEAM = Y773Q8S6TX;
+				DEVELOPMENT_TEAM = PK23A29CQ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -344,7 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pendasi/Preview Content\"";
-				DEVELOPMENT_TEAM = Y773Q8S6TX;
+				DEVELOPMENT_TEAM = PK23A29CQ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
