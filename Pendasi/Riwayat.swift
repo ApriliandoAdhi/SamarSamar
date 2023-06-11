@@ -9,34 +9,36 @@ struct Riwayat: View {
             ZStack {
                 Color("Abu")
                     .ignoresSafeArea()
-                VStack {
-                    Group {
-                        HStack {
-                            Text("Daging")
-                                .font(.body)
-                                .fontWeight(.regular)
-                            Text("+")
-                            Text("Kentang")
-                                .font(.body)
-                                .fontWeight(.regular)
-                                .padding(.trailing, 40)
-                            Text("😍")
-                            Text("10")
-                                .font(.body)
-                                .fontWeight(.regular)
-                            Text("😣")
-                            Text("2")
-                                .font(.body)
-                                .fontWeight(.regular)
-                            Text("🤮")
-                            Text("1")
-                                .font(.body)
-                                .fontWeight(.regular)
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        Group {
+                            HStack {
+                                Text("Daging")
+                                    .font(.body)
+                                    .fontWeight(.regular)
+                                Text("+")
+                                Text("Kentang")
+                                    .font(.body)
+                                    .fontWeight(.regular)
+                                    .padding(.trailing, 40)
+                                Text("😍")
+                                Text("10")
+                                    .font(.body)
+                                    .fontWeight(.regular)
+                                Text("😣")
+                                Text("2")
+                                    .font(.body)
+                                    .fontWeight(.regular)
+                                Text("🤮")
+                                Text("1")
+                                    .font(.body)
+                                    .fontWeight(.regular)
+                            }
+                            Divider()
                         }
-                        Divider()
-                            .padding(.bottom, 600.0)
                     }
                 }
+                .padding(.all, 8.0)
                 .toolbarBackground(Color.white, for: .navigationBar)
                 .toolbarBackground(.visible, for: .navigationBar)
             }

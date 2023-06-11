@@ -10,33 +10,36 @@ struct GantiMenu: View {
             ZStack {
                 Color("Abu")
                     .ignoresSafeArea()
-                VStack {
-                    Group {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 15)
-                                .frame(width: 358.0, height: 58.0)
-                                .foregroundColor(.white)
-                            HStack {
-                                Image("Daging")
-                                    .resizable()
-                                    .frame(width: 42.0, height: 42.0)
-                                Image("Kentang")
-                                    .resizable()
-                                    .frame(width: 42.0, height: 42.0)
-                                Text("Daging")
-                                Text("+")
-                                Text("Kentang")
-                                    .padding(.trailing, 40)
-                                Button(action: {
-                                    showActionSheet = true
-                                }) {
-                                    Image(systemName: "plus.circle")
-                                        .foregroundColor(.yellow) 
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack {
+                        Group {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 15)
+                                    .frame(width: 358.0, height: 58.0)
+                                    .foregroundColor(.white)
+                                HStack {
+                                    Image("Daging")
+                                        .resizable()
+                                        .frame(width: 42.0, height: 42.0)
+                                    Image("Kentang")
+                                        .resizable()
+                                        .frame(width: 42.0, height: 42.0)
+                                    Text("Daging")
+                                    Text("+")
+                                    Text("Kentang")
+                                        .padding(.trailing, 40)
+                                    Button(action: {
+                                        showActionSheet = true
+                                    }) {
+                                        Image(systemName: "plus.circle")
+                                            .foregroundColor(.yellow) 
+                                    }
                                 }
                             }
                         }
+                        Spacer()
                     }
-                    Spacer()
+                    .padding(.all, 8.0)
                 }
                 .toolbarBackground(Color.white, for: .navigationBar)
                 .toolbarBackground(.visible, for: .navigationBar)

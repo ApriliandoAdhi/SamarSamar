@@ -37,7 +37,7 @@ struct ProfilAnak: View {
                         .padding(.leading, 16)
                         .padding(.trailing, 16)
                     }
-                    .padding(.bottom, 700)
+                    .padding(.bottom, 600)
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
