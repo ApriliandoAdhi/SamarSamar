@@ -1,10 +1,12 @@
 import SwiftUI
 
 struct Pemberitahuan: View {
+    @Environment(\.presentationMode) var presentationMode
     @State private var isShowingModal = false
+    
 
     var body: some View {
-        NavigationView {
+        //NavigationView {
             ZStack {
                 Color("Abu")
                     .ignoresSafeArea()
@@ -47,16 +49,34 @@ struct Pemberitahuan: View {
                     }
                     .padding(.all, 8.0)
                 }
-                .toolbarBackground(Color.white, for: .navigationBar)
-                .toolbarBackground(.visible, for: .navigationBar)
-                .navigationTitle("Pemberitahuan")
-                .navigationBarTitleDisplayMode(.inline)
+//                .toolbarBackground(Color.white, for: .navigationBar)
+//                .toolbarBackground(.visible, for: .navigationBar)
+//                .navigationTitle("Pemberitahuan")
+//                .navigationBarTitleDisplayMode(.inline)
+                
+                .navigationBarTitle(Text ("Pemberitahuan"), displayMode: .inline)
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading: backButton)
+                
                 .sheet(isPresented: $isShowingModal) {
                     BeritahuRespon()
                 }
-            }
+          //  }
         }
     }
+    
+    var backButton: some View {
+            Button(action:  {
+                presentationMode.wrappedValue.dismiss()
+                // Handle back button action here
+            }) {
+                HStack {
+                    Image(systemName: "arrow.left")
+                    Text("Kembali")
+                }
+            }
+        }
+    
 }
 
 struct Pemberitahuan_Previews: PreviewProvider {

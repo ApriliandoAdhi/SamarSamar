@@ -17,38 +17,46 @@ struct ContentView: View {
                         Image("OnBoarding")
                             .resizable()
                             .frame(width: 326.0, height: 314.0)
-                        Text("Petualangan kuliner sehat dan lezat untuk si kecil dengan MPASI Mingguan")
-                            .font(.callout)
-                            .fontWeight(.regular)
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(Color.black)
-                        TextField("Nama", text: $name)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding()
-                        Button(action: {
-                            isDatePickerVisible = true
-                        }) {
-                            TextField("Tanggal Lahir Anak Anda", text: .constant(dateToString(date: birthdate)), onEditingChanged: { _ in
+                            .padding(.top, 24)
+                        VStack{
+                            Text("PROFILE ANAK")
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(Color.black)
+                            TextField("Nama", text: $name)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                               // .padding()
+                            Button(action: {
                                 isDatePickerVisible = true
-                            })
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .padding()
-                            .multilineTextAlignment(.leading)
-                            .disabled(true)
-                        }
-                        if isDatePickerVisible {
-                            DatePicker(
-                                selection: $birthdate,
-                                displayedComponents: [.date]
-                            ) {
-                                Text("")
-                            }
-                            .datePickerStyle(WheelDatePickerStyle())
-                            .padding()
-                            .onChange(of: birthdate) { _ in
-                                isDatePickerVisible = false
+                            }) {
+                                TextField("Tanggal Lahir Anak Anda", text: .constant(dateToString(date: birthdate)), onEditingChanged: { _ in
+                                    isDatePickerVisible = true
+                                })
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                //.padding()
+                                .multilineTextAlignment(.leading)
+                                .disabled(true)
                             }
                         }
+                        .frame(maxWidth: .infinity)
+                                                    
+                                                    Spacer()
+
+                            if isDatePickerVisible {
+                                DatePicker(
+                                    selection: $birthdate,
+                                    displayedComponents: [.date]
+                                ) {
+                                    Text("")
+                                }
+                                .datePickerStyle(WheelDatePickerStyle())
+                                .padding()
+                                .onChange(of: birthdate) { _ in
+                                    isDatePickerVisible = false
+                                }
+                            }
+                        
                         NavigationLink(destination: TabVIew(), isActive: $isPlanStarted) {
                             EmptyView()
                         }
@@ -58,10 +66,9 @@ struct ContentView: View {
                         } label: {
                             Text("Mulai Rencana")
                                 .fontWeight(.bold)
-                                .multilineTextAlignment(.center)
+                            // .multilineTextAlignment(.center)
                                 .lineLimit(1)
-                                .padding(.trailing, 100)
-                                .padding(.leading, 94)
+                                .frame(maxWidth: .infinity)
                                 .padding(.top, 16)
                                 .padding(.bottom, 16 )
                                 .font(.title2)
@@ -90,9 +97,9 @@ struct ContentView: View {
                 }
             })
             .background(
-//                NavigationLink(destination: ProfilAnak(name: name, birthdate: birthdate), isActive: $isPlanStarted) {
-//                    EmptyView()
-//                }
+                //                NavigationLink(destination: ProfilAnak(name: name, birthdate: birthdate), isActive: $isPlanStarted) {
+                //                    EmptyView()
+                //                }
             )
         }
     }
