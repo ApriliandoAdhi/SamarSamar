@@ -84,11 +84,19 @@ struct RencanaMingguan: View {
                     .toolbarBackground(.visible, for: .navigationBar)
                     
                     ModalView(isShowing: $showModal)
+                        .padding(.bottom, 2)
                     
                 }
                 .accentColor(Color("primary"))
                 
                 
+                
+                .toolbar{
+                    ToolbarItem(placement: .navigationBarLeading){
+                        Image(systemName: "person.circle.fill")
+                            .font(.system(size: 20))
+                    }
+                }
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         Text("Rencana MPASI").font(.headline)
@@ -128,17 +136,69 @@ struct RencanaMPASI: View{
 
 struct BahanMPASI: View{
     var body: some View{
-        
         VStack{
             Text("Bahan yang harus disiapkan minggu ini:")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.custom("SFProText-Bold", size: 16))
             
-           
+            HStack(){
+                Image("ayam")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50, height: 50)
+                
+                
+                VStack(alignment: .leading, spacing: 3){
+                    Text("Ayam")
+                        .font(.system(size: 23))
+                        .fontWeight(.medium)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.5)
+                    Text("0.5 kg")
+                        .font(.system(size: 18))
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
+            .padding(.top, 12)
+            .frame(maxWidth: .infinity, alignment: .leading)
+         
+            Divider()
+                .background(.black)
+                .padding(.leading, 60)
             
+            HStack(){
+                Image("ayam")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50, height: 50)
+                
+                
+                VStack(alignment: .leading, spacing: 3){
+                    Text("Ayam")
+                        .font(.system(size: 23))
+                        .fontWeight(.medium)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.5)
+                    Text("0.5 kg")
+                        .font(.system(size: 18))
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
+            .padding(.top, 12)
+            .frame(maxWidth: .infinity, alignment: .leading)
+         
+            Divider()
+                .background(.black)
+                .padding(.leading, 60)
         }
+        .padding(.top, 12)
         .padding(.leading, 30)
         Spacer()
+        
+        
+        
     }
 }
 

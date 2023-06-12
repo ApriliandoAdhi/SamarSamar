@@ -25,7 +25,7 @@ struct tanggal: View {
                         VStack {
                             ZStack{
                                 Rectangle()
-                                    .foregroundColor(.pink)
+                                    .foregroundColor(.white)
                                     .frame(width: 350, height: 500)
                                     .cornerRadius(25)
 
