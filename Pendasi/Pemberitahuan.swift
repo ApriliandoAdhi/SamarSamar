@@ -49,8 +49,8 @@ struct Pemberitahuan: View {
                     }
                     .padding(.all, 8.0)
                 }
-//                .toolbarBackground(Color.white, for: .navigationBar)
-//                .toolbarBackground(.visible, for: .navigationBar)
+                .toolbarBackground(Color.white, for: .navigationBar)
+                .toolbarBackground(.visible, for: .navigationBar)
 //                .navigationTitle("Pemberitahuan")
 //                .navigationBarTitleDisplayMode(.inline)
                 

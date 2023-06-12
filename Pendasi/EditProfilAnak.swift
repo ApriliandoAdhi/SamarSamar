@@ -5,6 +5,7 @@ struct EditProfilAnak: View {
     @State private var birthdate: Date = Date()
     @State private var isDatePickerVisible = false
     @State private var isSaved = false
+    @Environment(\.presentationMode) var presentationMode
 
     var isFormFilled: Bool {
         return !name.isEmpty && !birthdate.description.isEmpty
@@ -21,7 +22,7 @@ struct EditProfilAnak: View {
     }
 
     var body: some View {
-        NavigationView {
+//        NavigationView {
             ZStack {
                 Color("Abu")
                     .ignoresSafeArea()
@@ -72,14 +73,29 @@ struct EditProfilAnak: View {
                 }
                 .toolbarBackground(Color.white, for: .navigationBar)
                 .toolbarBackground(.visible, for: .navigationBar)
-                .navigationTitle("Edit Profil Anak")
-                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarTitle(Text ("Pemberitahuan"), displayMode: .inline)
+                .navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading: backButton)
+                
+//                .navigationTitle("Edit Profil Anak")
+//                .navigationBarTitleDisplayMode(.inline)
             }
             .fullScreenCover(isPresented: $isSaved) {
                 ProfilAnak(name: name, birthdate: birthdate)
             }
-        }
+//        }
     }
+    var backButton: some View {
+            Button(action:  {
+                presentationMode.wrappedValue.dismiss()
+                // Handle back button action here
+            }) {
+                HStack {
+                    Image(systemName: "arrow.left")
+                    Text("Kembali")
+                }
+            }
+        }
 }
 
 struct EditProfilAnak_Previews: PreviewProvider {
