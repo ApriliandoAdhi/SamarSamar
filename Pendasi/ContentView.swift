@@ -28,7 +28,7 @@ struct ContentView: View {
                         Button(action: {
                             isDatePickerVisible = true
                         }) {
-                            TextField("Tanggal Lahir", text: .constant(""), onEditingChanged: { _ in
+                            TextField("Tanggal Lahir", text: .constant(dateToString(date: birthdate)), onEditingChanged: { _ in
                                 isDatePickerVisible = true
                             })
                             .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -42,11 +42,12 @@ struct ContentView: View {
                                 displayedComponents: [.date]
                             ) {
                                 Text("")
-                                
                             }
                             .datePickerStyle(WheelDatePickerStyle())
                             .padding()
-                            
+                            .onChange(of: birthdate) { _ in
+                                isDatePickerVisible = false
+                            }
                         }
                         NavigationLink(destination: TabVIew(), isActive: $isPlanStarted) {
                             EmptyView()
@@ -84,12 +85,18 @@ struct ContentView: View {
                         .foregroundColor(Color("Kuning"))
                 }
             })
+            .background(
+                NavigationLink(destination: ProfilAnak(name: name, birthdate: birthdate), isActive: $isPlanStarted) {
+                    EmptyView()
+                }
+            )
         }
-        .background(
-            NavigationLink(destination: ProfilAnak(name: name, birthdate: birthdate), isActive: $isPlanStarted) {
-                EmptyView()
-            }
-        )
+    }
+    
+    func dateToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM yyyy"
+        return formatter.string(from: date)
     }
 }
 
@@ -98,6 +105,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
-
