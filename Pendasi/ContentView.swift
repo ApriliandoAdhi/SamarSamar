@@ -17,65 +17,58 @@ struct ContentView: View {
                         Image("OnBoarding")
                             .resizable()
                             .frame(width: 326.0, height: 314.0)
-                            .padding(.top, 24)
-                        VStack {
-                            VStack{
-                                Text("PROFILE ANAK")
-                                    .font(.largeTitle)
-                                    .fontWeight(.bold)
-                                    .multilineTextAlignment(.center)
-                                    .foregroundColor(Color.black)
-                                TextField("Nama", text: $name)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    //   .padding()
-                                Button(action: {
-                                    isDatePickerVisible = true
-                                }) {
-                                    TextField("Tanggal Lahir", text: .constant(""), onEditingChanged: { _ in
-                                        isDatePickerVisible = true
-                                    })
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                   // .padding()
-                                    .multilineTextAlignment(.leading)
-                                    .disabled(true)
-                                }
+                        Text("Petualangan kuliner sehat dan lezat untuk si kecil dengan MPASI Mingguan")
+                            .font(.callout)
+                            .fontWeight(.regular)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(Color.black)
+                        TextField("Nama", text: $name)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding()
+                        Button(action: {
+                            isDatePickerVisible = true
+                        }) {
+                            TextField("Tanggal Lahir Anak Anda", text: .constant(dateToString(date: birthdate)), onEditingChanged: { _ in
+                                isDatePickerVisible = true
+                            })
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding()
+                            .multilineTextAlignment(.leading)
+                            .disabled(true)
+                        }
+                        if isDatePickerVisible {
+                            DatePicker(
+                                selection: $birthdate,
+                                displayedComponents: [.date]
+                            ) {
+                                Text("")
                             }
-                            .frame(maxWidth: .infinity)
-                            
-                            Spacer()
-                            
-                            if isDatePickerVisible {
-                                DatePicker(
-                                    selection: $birthdate,
-                                    displayedComponents: [.date]
-                                ) {
-                                    Text("")
-                                    
-                                }
-                                .datePickerStyle(WheelDatePickerStyle())
-                                .padding()
-                                
+                            .datePickerStyle(WheelDatePickerStyle())
+                            .padding()
+                            .onChange(of: birthdate) { _ in
+                                isDatePickerVisible = false
                             }
-                            NavigationLink(destination: TabVIew(), isActive: $isPlanStarted) {
-                                EmptyView()
-                            }
-                            .navigationBarBackButtonHidden(true)
-                            Button {
-                                isPlanStarted = true
-                            } label: {
-                                Text("Mulai Rencana")
-                                    .fontWeight(.bold)
-                                   // .multilineTextAlignment(.center)
-                                    .lineLimit(1)
-                                    .frame(maxWidth: .infinity)
-                                    .padding(.top, 16)
-                                    .padding(.bottom, 16 )
-                                    .font(.title2)
-                                    .background(Color("AccentColor"))
-                                    .cornerRadius(8)
-                                    .foregroundColor(.white)
-                                    .shadow(radius: 5)
-                            }
+                        }
+                        NavigationLink(destination: TabVIew(), isActive: $isPlanStarted) {
+                            EmptyView()
+                        }
+                        .navigationBarBackButtonHidden(true)
+                        Button {
+                            isPlanStarted = true
+                        } label: {
+                            Text("Mulai Rencana")
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.center)
+                                .lineLimit(1)
+                                .padding(.trailing, 100)
+                                .padding(.leading, 94)
+                                .padding(.top, 16)
+                                .padding(.bottom, 16 )
+                                .font(.title2)
+                                .background(Color("AccentColor"))
+                                .cornerRadius(8)
+                                .foregroundColor(.white)
+                                .shadow(radius: 5)
                         }
                     }
                 }
@@ -96,12 +89,18 @@ struct ContentView: View {
                         .foregroundColor(Color("Kuning"))
                 }
             })
+            .background(
+//                NavigationLink(destination: ProfilAnak(name: name, birthdate: birthdate), isActive: $isPlanStarted) {
+//                    EmptyView()
+//                }
+            )
         }
-        .background(
-            NavigationLink(destination: ProfilAnak(name: name, birthdate: birthdate), isActive: $isPlanStarted) {
-                EmptyView()
-            }
-        )
+    }
+    
+    func dateToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM yyyy"
+        return formatter.string(from: date)
     }
 }
 
@@ -110,6 +109,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
-
