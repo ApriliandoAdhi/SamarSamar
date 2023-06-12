@@ -28,7 +28,7 @@ struct ContentView: View {
                         Button(action: {
                             isDatePickerVisible = true
                         }) {
-                            TextField("Tanggal Lahir", text: .constant(dateToString(date: birthdate)), onEditingChanged: { _ in
+                            TextField("Tanggal Lahir Anak Anda", text: .constant(dateToString(date: birthdate)), onEditingChanged: { _ in
                                 isDatePickerVisible = true
                             })
                             .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -86,9 +86,9 @@ struct ContentView: View {
                 }
             })
             .background(
-                NavigationLink(destination: ProfilAnak(name: name, birthdate: birthdate), isActive: $isPlanStarted) {
-                    EmptyView()
-                }
+//                NavigationLink(destination: ProfilAnak(name: name, birthdate: birthdate), isActive: $isPlanStarted) {
+//                    EmptyView()
+//                }
             )
         }
     }
